@@ -3,7 +3,7 @@ import weatherapp from '../assets/portfolio/weatherapp.png'
 import chatapp from '../assets/portfolio/chat1.png'
 import e_shopps from '../assets/portfolio/Capture.png' 
 import {Link} from 'react-router-dom'
-// import reactWeather from '../assets/portfolio/reactWeather.jpg'
+
 
 const Portfolio = () => {
 const portfolios=[
