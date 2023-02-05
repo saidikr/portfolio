@@ -15,7 +15,7 @@ export const Navbar = () => {
   return (
     <div className='bg-black px-4 flex justify-between items-center w-full h-20 text-white sticky top-0 z-50'>
         <div>
-            <h1 className='text-5xl font-signature ml-2'>Said</h1>
+            <h1 className='text-5xl font-bold ml-2'>IKROUBERKANE</h1>
         </div>
         <ul className='hidden md:flex'>
             {links.map(({id,link})=>(

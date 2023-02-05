@@ -10,7 +10,7 @@ export const SocialLinks = () => {
             child:(
                 <>LinkedIn <FaLinkedin size={30}/></>
             ),
-            href:'https://linkedin.com',
+            href:'https://www.linkedin.com/in/said-ikrouberkane-082b0018a/',
             style: 'rounded-tr-md'
         },
         {

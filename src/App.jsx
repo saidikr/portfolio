@@ -1,23 +1,22 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Home from "./components/Home"
-import { Navbar } from "./components/Navbar"
-import Portfolio from "./components/Portfolio";
-import { SocialLinks } from "./components/SocialLinks"
-;
+import HomePage from "./components/HomePage"
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom"
+import DetailPage from "./components/DetailPage"
+import Wkaufer from "./components/Wkaufer"
+import WeatherApp from "./components/Weather"
+import ChatAppMessage from "./components/Chatapp"
 
 function App() {
 
   return (
     <div>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Portfolio/>
-      <Experience/>
-      <SocialLinks/>
-      <Contact/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/wkaufer" element={<Wkaufer/>}/>
+          <Route path="/weather" element={<WeatherApp/>}/>
+          <Route path="/chatapp" element={<ChatAppMessage/>}/>
+        </Routes>
+      </Router>
     </div>
   )
 }

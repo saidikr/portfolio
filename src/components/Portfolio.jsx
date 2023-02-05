@@ -1,37 +1,30 @@
 import React from 'react'
-import arrayDestruct from '../assets/portfolio/arrayDestruct.jpg'
-import navbar from '../assets/portfolio/navbar.jpg'
-import installNode from '../assets/portfolio/installNode.jpg'
-import reactParallax from '../assets/portfolio/reactParallax.jpg'
-import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
+import weatherapp from '../assets/portfolio/weatherapp.png'
+import chatapp from '../assets/portfolio/chat1.png'
+import e_shopps from '../assets/portfolio/Capture.png' 
+import {Link} from 'react-router-dom'
 // import reactWeather from '../assets/portfolio/reactWeather.jpg'
 
 const Portfolio = () => {
 const portfolios=[
     {
-        id:1,
-        src:arrayDestruct
-    },
-    {
-        id:2,
-        src:navbar
-    },
-    {
         id:6,
-        src:installNode
+        title:"Weather Website",
+        link:'/weather',
+        src:weatherapp
     },
     {
         id:3,
-        src:reactParallax
+        title:"W-Kaufer Website",
+        link:'/wkaufer',
+        src:e_shopps
     },
     {
         id:4,
-        src:reactSmooth
+        title:"ChatApp Website",
+        link:'/chatapp',
+        src:chatapp
     },
-    // {
-    //     id:5,
-    //     src:reactWeather
-    // },
 ]
     return (
     <div name='portfolio' className='pt-20 bg-gradient-to-b from-black  to-gray-800 w-full text-white '>
@@ -40,22 +33,21 @@ const portfolios=[
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
                 <p className='py-6 text-xl'>Découvrez quelques-unes de mes réalisations ici</p>
             </div>
-                <div  className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+                <div  className='grid sm:grid-cols-1 md:grid-cols-2 gap-8 px-12 sm:px-0'>
 
-            {
-                portfolios.map(({id,src})=>(
-                
-                <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                    <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
-                    <div className='flex items-center justify-center'>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
-                    </div>
-                    </div>
-                ))
-            }
-                            </div>
-            
+                    {
+                    portfolios.map(({id,src,title,link})=>(
+                    
+                    <div key={id} className='shadow-md shadow-gray-600 w-[450px] rounded-lg'>
+                        <img src={src} alt="" className='rounded-md duration-200 hover:scale-105 w-[450px] h-[250px]'/>
+                        <p className='mt-2 text-2xl font-medium text-center'>{title}</p>
+                        <div className='flex items-center justify-center'>
+                            <Link to={link} className='border text-center border-gray-50 rounded-xl w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>View Détaill</Link>
+                        </div>
+                        </div>
+                    ))
+                    }
+                </div>            
         </div>
     </div>
   )
